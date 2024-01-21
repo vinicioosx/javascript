@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual Pais?</title>
+</head>
+<body>
+    <h1>Sistema de Fronteira Brasil</h1>
+    Qual país você é? <input type="text" name="txtpa" id="textopais" placeholder="País"><input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var res = document.querySelector('div#res')
+            var pais = pegartextopais()
+            if (pais === "brasil") {
+                res.innerHTML = `<p> Você é Brasileiro </p>`
+            } else {
+                res.innerHTML = `<p> Você é Estrageiro </p>`
+            }
+            
+        }
+
+        function pegartextopais() {
+            var textopais = document.getElementById('textopais')
+            var textominusculo = String(textopais.value).toLowerCase()
+            return textominusculo
+        }
+    </script>
+</body>
+</html>

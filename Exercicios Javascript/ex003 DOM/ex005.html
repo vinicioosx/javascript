@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <style>
+        body {
+            background-color: rgb(57, 165, 57);
+            color: white;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar <strong>DOM</strong> no Javascript</p>
+    <div id="aviso">Clique em mim</div>
+    <div name="aviso">Por Name</div>
+    <div class="aviso">Por Seletor</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById ('aviso')
+        var e = window.document.getElementsByName('aviso')[0]
+        var f = window.document.querySelector('div.aviso')
+        corpo.style.background = 'pink'
+        p1.style.color = 'blue'
+        d.style.background = 'green'
+        e.style.background = 'black'
+        f.style.background = 'blue'
+    </script>
+</body>
+</html>
